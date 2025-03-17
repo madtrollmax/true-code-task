@@ -2,7 +2,7 @@
 
 1. Скачать репозиторий
 ```sh
-git clone git@gitlab.com:makscode/truecodetask.git
+git clone https://github.com/madtrollmax/true-code-task.git
 ```
 2. Задать переменные окружения в файле .env
 3. Запустить командой 
@@ -12,4 +12,4 @@ docker-compose up
 4. Открыть http://localhost:3000
 
 пользователь: user1
-парольь: password
+пароль: password
