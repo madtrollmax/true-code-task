@@ -2,14 +2,14 @@ FROM node:18-alpine AS react-builder
 
 WORKDIR /react-app
 COPY true-code-task-client/package.json true-code-task-client/package-lock.json ./
-RUN npm ci --only=production
+RUN npm install
 COPY true-code-task-client ./
 RUN npm run build
 
 FROM node:18-alpine AS nest-builder
 WORKDIR /nest-app
 COPY true-code-task-server/package.json true-code-task-server/package-lock.json ./
-RUN npm ci --only=production
+RUN npm install
 COPY true-code-task-server ./
 RUN npm run build
 
